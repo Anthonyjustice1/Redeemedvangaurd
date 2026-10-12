@@ -10,11 +10,8 @@ html {
   scroll-behavior: smooth;
   scroll-padding-top: -8em;
 }
-.vidsec {
-  /* position: relative; */
-}
-.mobile-vid {
-  display: none;
+body {
+  padding: 1em;
 }
 #logo {
   height: 45px;
@@ -27,22 +24,22 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1em 3em;
+  /* padding: 1em; */
   
 }
 nav {
-  flex: 1;
-  /* background-image: linear-gradient(#FCB045); */
+  margin-left: auto;
 }
 nav ul {
-  background: linear-gradient(90deg,rgba(131, 58, 180, 1) 0%, rgba(253, 29, 29, 1) 0%, rgba(252, 176, 69, 1) 56%);
-  display: flex;
-  gap: 2em;
-  float: right;
+
 }
 
 nav ul li {
-  position: relative;
+ display: inline;
+ margin-left: 20px;
+ cursor: pointer;
+ font-size: 18px;
+ 
 }
 
 nav ul li a {
@@ -53,7 +50,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  color: #ff014f;
+ 
 }
 
 #openbtn, #closebtn {
@@ -68,12 +65,26 @@ nav ul li a:hover {
   z-index: -1;
   object-fit: cover;
 }
-@media screen and (max-width: 768px) {
-    .desktop-vid {
-        display: none;
-    }
+@media screen and (max-width: 435px) {
+ #openbtn {
+  display: block;
+ }
+ nav ul {
+  background: #d9d8c2;
+  position: fixed;
+  top: 10vh;
+  height: 32vh;
 
-    .mobile-vid {
-        display: block;
-    }
+  /* width: 100%; */
+  overflow: hidden;
+  right: -112px;
+  transition: 0.4 ease-in-out;
+  z-index: 999;
+  align-items: center;
+  padding: 2vh
+ }
+ nav ul li {
+  display: block;
+  margin-bottom: 20px;
+ }
 }
