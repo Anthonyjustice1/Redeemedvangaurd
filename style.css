@@ -39,14 +39,13 @@ nav ul li {
  margin-left: 20px;
  cursor: pointer;
  font-size: 18px;
- 
+  
 }
 
 nav ul li a {
   color: #000;
   font-size: 1.1em;
   font-weight: 500;
-  transition: 0.3s ease-in-out;
 }
 
 nav ul li a:hover {
@@ -65,26 +64,29 @@ nav ul li a:hover {
   z-index: -1;
   object-fit: cover;
 }
-@media screen and (max-width: 435px) {
- #openbtn {
-  display: block;
- }
- nav ul {
-  background: #d9d8c2;
-  position: fixed;
-  top: 10vh;
-  height: 32vh;
+@media screen and (max-width: 550px) {
+  #openbtn {
+    display: block;
+  }
 
-  /* width: 100%; */
-  overflow: hidden;
-  right: -112px;
-  transition: 0.4 ease-in-out;
-  z-index: 999;
-  align-items: center;
-  padding: 2vh
- }
- nav ul li {
-  display: block;
-  margin-bottom: 20px;
- }
+  nav ul {
+    background: #d9d8c2;
+    position: fixed;
+    top: 10vh;
+    right: -100%;
+    width: 100%;
+    padding: 2vh;
+    transition: right 0.4s ease-in-out;
+    z-index: 999;
+  }
+
+  nav ul li {
+    display: block;
+    margin: 0 0 20px;
+  }
+
+  /* open state */
+  header.menu-open nav ul { right: -60%; }
+  header.menu-open #openbtn { display: none; }
+  header.menu-open #closebtn { display: block; }
 }
