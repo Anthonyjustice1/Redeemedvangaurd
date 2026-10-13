@@ -10,9 +10,11 @@ html {
   scroll-behavior: smooth;
   scroll-padding-top: -8em;
 }
+
 body {
   /* padding: 1em; */
 }
+
 #logo {
   height: 45px;
   width: 45px;
@@ -27,19 +29,19 @@ header {
   background: #d9d8c2;
   padding: 1em;
 }
+
 nav {
   margin-left: auto;
 }
-nav ul {
 
-}
+nav ul {}
 
 nav ul li {
- display: inline;
- margin-left: 20px;
- cursor: pointer;
- font-size: 18px;
-  
+  display: inline;
+  margin-left: 20px;
+  cursor: pointer;
+  font-size: 18px;
+
 }
 
 nav ul li a {
@@ -48,13 +50,14 @@ nav ul li a {
   font-weight: 500;
 }
 
-nav ul li a:hover {
- 
+nav ul li a:hover {}
+
+#openbtn,
+#closebtn {
+  display: none;
+  font-size: 5px;
 }
 
-#openbtn, #closebtn {
-  display: none;
-}
 .bg-video {
   width: 100%;
   height: 100%;
@@ -64,6 +67,7 @@ nav ul li a:hover {
   z-index: -1;
   object-fit: cover;
 }
+
 @media screen and (max-width: 550px) {
   #openbtn {
     display: block;
@@ -72,12 +76,12 @@ nav ul li a:hover {
   nav ul {
     background: #d9d8c2;
     position: fixed;
-    top: 6vh;
-    right: -100%;
+    top: -100%;
+    right: 0;
     width: 100%;
     padding: 2vh;
-    transition: right 0.4s ease-in-out;
-    z-index: 999;
+    transition: top 0.4s ease-in-out;
+    z-index: -1;
   }
 
   nav ul li {
@@ -86,7 +90,15 @@ nav ul li a:hover {
   }
 
   /* open state */
-  header.menu-open nav ul { right: -60%; }
-  header.menu-open #openbtn { display: none; }
-  header.menu-open #closebtn { display: block; }
+  header.menu-open nav ul {
+    top: 60px;
+  }
+
+  header.menu-open #openbtn {
+    display: none;
+  }
+
+  header.menu-open #closebtn {
+    display: block;
+  }
 }
