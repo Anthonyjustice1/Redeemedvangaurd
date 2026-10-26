@@ -29,7 +29,6 @@ header {
   background: #d9d8c2;
   padding: 1em;
   margin-bottom: 10vh;
-  z-index: 1000;
 }
 
 nav {
@@ -60,15 +59,7 @@ nav ul li a:hover {}
   font-size: 5px;
 }
 
-.bg-video {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  z-index: -1;
-  object-fit: cover;
-}
+
 /* remove the blue flash when tapping links and buttons */
 nav,
 nav ul,
@@ -123,7 +114,12 @@ nav a:active {
     display: block;
   }
 }
-
+header {
+    z-index: 1000;
+}
+/* nav #navlist {
+  z-index: 1000;
+} */
 /* ===== Dropdown sub-menus ===== */
 nav ul li.has-sub {
   position: relative;
