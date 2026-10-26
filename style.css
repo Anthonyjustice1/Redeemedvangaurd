@@ -29,6 +29,7 @@ header {
   background: #d9d8c2;
   padding: 1em;
   margin-bottom: 25vh;
+  z-index: 1000;
 }
 
 nav {
@@ -68,6 +69,20 @@ nav ul li a:hover {}
   z-index: -1;
   object-fit: cover;
 }
+/* remove the blue flash when tapping links and buttons */
+nav,
+nav ul,
+nav li,
+nav a,
+nav button {
+  -webkit-tap-highlight-color: transparent;
+}
+
+nav a:focus,
+nav a:active {
+  outline: none;
+  background: transparent;
+}
 
 @media screen and (max-width: 550px) {
   #openbtn {
@@ -82,7 +97,7 @@ nav ul li a:hover {}
     width: 100%;
     padding: 2vh;
     transition: top 0.4s ease-in-out;
-    z-index: -1;
+    /* z-index: -1; */
   }
 
   nav ul li {
