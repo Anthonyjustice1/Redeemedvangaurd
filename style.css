@@ -28,6 +28,7 @@ header {
   align-items: center;
   background: #d9d8c2;
   padding: 1em;
+  margin-bottom: 25vh;
 }
 
 nav {
@@ -119,14 +120,20 @@ nav ul li.has-sub {
   background: none;
   border: none;
   cursor: pointer;
-  padding: 6px;
-  font-size: 1em;
+  padding: 0 6px;
   color: #000;
-  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 1.5em;
 }
 .arrow::after {
   content: "⌄";
-  display: inline-block;
+  display: block;
+  font-size: 1.2em;
+  line-height: 1;
+  position: relative;
+  top: -0.2em;          /* nudges the arrow up to line up with the text */
   transition: transform 0.2s;
 }
 li.open > .nav-row .arrow::after {
@@ -177,3 +184,21 @@ nav ul li .submenu a:hover {
     padding-left: 12px;
   }
 }
+#home {
+  padding: 1em;
+}
+.hero h1 {
+  font-size: 50px;
+}
+.hero p {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+.hero button {
+  outline: none;
+  border: none;
+  font-size: 18px;
+  padding: 5px 10px;
+  border-radius: 10px;
+  background: #c5c4a8;
+} 
