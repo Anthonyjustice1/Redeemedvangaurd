@@ -28,7 +28,7 @@ header {
   align-items: center;
   background: #d9d8c2;
   padding: 1em;
-  margin-bottom: 25vh;
+  margin-bottom: 10vh;
   z-index: 1000;
 }
 
@@ -76,6 +76,11 @@ nav li,
 nav a,
 nav button {
   -webkit-tap-highlight-color: transparent;
+}
+nav a:focus-visible,
+nav button:focus-visible {
+  outline: 2px solid #000;
+  outline-offset: 2px;
 }
 
 nav a:focus,
@@ -136,23 +141,23 @@ nav ul li.has-sub {
   border: none;
   cursor: pointer;
   padding: 0 6px;
-  color: #000;
   display: flex;
   align-items: center;
   justify-content: center;
   height: 1.5em;
 }
 .arrow::after {
-  content: "⌄";
+  content: "";
   display: block;
-  font-size: 1.2em;
-  line-height: 1;
-  position: relative;
-  top: -0.2em;          /* nudges the arrow up to line up with the text */
+  width: 7px;
+  height: 7px;
+  border-right: 2px solid #000;
+  border-bottom: 2px solid #000;
+  transform: translateY(-3px) rotate(45deg);   /* pointing down */
   transition: transform 0.2s;
 }
 li.open > .nav-row .arrow::after {
-  transform: rotate(180deg);
+  transform: translateY(3px) rotate(-135deg);  /* pointing up */
 }
 
 /* the dropdown: hidden until the li has class "open" */
@@ -207,7 +212,7 @@ nav ul li .submenu a:hover {
 }
 .hero p {
   font-size: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 0px;
 }
 .hero button {
   outline: none;
