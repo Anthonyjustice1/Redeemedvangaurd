@@ -33,6 +33,7 @@ header {
 
 nav {
   margin-left: auto;
+  z-index: 1000;
 }
 
 nav ul {}
