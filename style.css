@@ -188,14 +188,14 @@ nav ul li .submenu a {
   padding: 10px 14px;
   font-family: Roboto, sans-serif;
   font-size: 15px;
-  font-weight: 500;
+  font-weight: 700;
   line-height: 28px;
-  color: #007a5e;
+  color: #003366;
 }
 
 nav ul li .submenu a:hover {
-  background: #003366;
-  color: #fff;
+  background: #e8ebea;
+  color: #007a5e;
 }
 
 /* =========================================================
@@ -398,6 +398,7 @@ nav ul li .submenu a:hover {
   /* hero fits small screens */
   #home {
     padding: 3em 1.5em;
+    height: 70dvh;
   }
 
   .hero h1 {
