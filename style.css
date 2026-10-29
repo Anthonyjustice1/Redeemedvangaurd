@@ -34,7 +34,7 @@ header {
   /* background: #003366;  (moved to header::before below) */
   padding: 1em;
   /* margin-bottom: 10vh; */
-  position: relative;   /* needed for z-index to work */
+  position: relative; /* needed for z-index to work */
   z-index: 1000;
 }
 
@@ -78,11 +78,18 @@ nav ul li {
 
 nav ul li a {
   color: #fff;
-  font-size: 0.9em;
-  font-weight: 500;
+  /* font-size: 0.9em; */
+  /* font-weight: 500; */
+
+  font-family: Figtree, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+font-size: 15px;
+font-weight: 600;
+line-height: 15px;
+color: #fff;
 }
 
-nav ul li a:hover {}
+nav ul li a:hover {
+}
 
 /* hamburger + close icons (hidden on desktop) */
 #openbtn,
@@ -147,12 +154,12 @@ nav ul li.has-sub {
   height: 7px;
   border-right: 2px solid #fff;
   border-bottom: 2px solid #fff;
-  transform: translateY(-3px) rotate(45deg);   /* pointing down */
+  transform: translateY(-3px) rotate(45deg); /* pointing down */
   transition: transform 0.2s;
 }
 
 li.open > .nav-row .arrow::after {
-  transform: translateY(3px) rotate(-135deg);  /* pointing up */
+  transform: translateY(3px) rotate(-135deg); /* pointing up */
 }
 
 /* the dropdown: hidden until the li has class "open" */
@@ -177,14 +184,18 @@ li.open > .submenu {
 }
 
 nav ul li .submenu a {
-  color: #000;
-  font-size: large;
-  display: block;
-  padding: 10px 14px;
+display: block;
+padding: 10px 14px;
+font-family: Roboto, sans-serif;
+font-size: 15px;
+font-weight: 500;
+line-height: 28px;
+color: #007a5e;
 }
 
 nav ul li .submenu a:hover {
-  background: #c5c4a8;
+  background: #003366;
+  color: #fff;
 }
 
 /* =========================================================
@@ -195,7 +206,7 @@ nav ul li .submenu a:hover {
   position: relative;
   height: 100dvh;
   overflow: hidden;
-  z-index: 0;   /* keeps the video and overlay inside this section */
+  z-index: 0; /* keeps the video and overlay inside this section */
 }
 
 .bg-video {
@@ -214,77 +225,109 @@ nav ul li .submenu a:hover {
 }
 
 .hero h1 {
-  font-size: 5em;
+  /* font-size: 5em; */
   margin-bottom: 15px;
   color: #ffffff;
-  line-height: 1;
+  /* line-height: 1; */
+
+  font-family:
+    "Bricolage Grotesque", "Arial Narrow", "Helvetica Neue", Arial, sans-serif;
+  font-size: 80px;
+  font-weight: 800;
+  line-height: 69px;
+  letter-spacing: -3.26px;
+  color: #fff;
 }
 
-.hero p {
+.hero .region {
   font-size: 2em;
   margin-bottom: 20px;
-  color: #ffffff;
+  font-family:
+    "Bricolage Grotesque", "Arial Narrow", "Helvetica Neue", Arial, sans-serif;
+  font-size: 50px;
   font-weight: 500;
+  line-height: 69px;
+  letter-spacing: -3.26px;
+  color: #c9d8e8;
 }
 
-.hero button {
-  outline: none;
-  border: none;
+.hero .join {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: 18px;
-  padding: 10px 20px;
-  border-radius: 15px;
-  background: red;
+  padding: 15px 15px;
+  border-radius: 60px;
+  background: #c41e3a;
   color: #fff;
   cursor: pointer;
   font-weight: 500;
+  width: 20%;
+}
+.hero .join p {
+  /* font-size: 16px; */
+  margin-bottom: 0;
+  margin-right: 5px;
+  /* font-weight: 400; */
+
+  font-family: Figtree, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+font-size: 15px;
+font-weight: 600;
+line-height: 15px;
+color: #dce7f2;
 }
 
 /* colour layer on top of the video */
 .hero::after {
-  content: '';
+  content: "";
   position: absolute;
   inset: 0;
   background: rgba(18, 71, 124, 0.9);
   z-index: -1;
 }
 .verse {
-  display: flex;
-  flex-direction: column;
-  gap: -5px;
+  position: relative;
+  padding-left: 12px;
 }
 .hero .verse p {
-  font-size: 16px;
-  margin-bottom: 8px;
+  /* font-size: 16px; */
+  /* margin-bottom: 8px; */
+
+  font-family: Figtree, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+font-size: 20px;
+font-weight: 400;
+line-height: 32px;
+color: #dce7f2;
 }
-.verse p::before {
+.verse::before {
   content: "";
-  display: inline-block;
-  height: 1.6em;            /* change this to make it taller */
-  border-left: 3px solid red;
-  margin-right: 7px;        /* use this instead of padding-left */
-  vertical-align: middle;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: #c41e3a;
 }
 .verse span {
-  font-size: 16px;
-  color: #73C3AF;
-  font-weight: bold;
+  /* font-size: 16px; */
+  color: #73c3af;
+  /* font-weight: bold; */
   display: block;
-  line-height: 1.2;
+  /* line-height: 1.2; */
   margin-bottom: 15px;
+
+  font-family: Figtree, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+font-size: 14px;
+font-weight: 700;
+line-height: 22px;
+letter-spacing: 1.12px;
+color: #7fd3b9;
 }
-
-
-
-
-
-
-
 
 /* =========================================================
    7. MOBILE (695px and below), kept at the end so it wins
    ========================================================= */
 @media screen and (max-width: 695px) {
-
   /* hamburger */
   #openbtn {
     display: block;
@@ -298,10 +341,10 @@ nav ul li .submenu a:hover {
     top: -100%;
     right: 0;
     width: 100%;
-    margin-right: 0;          /* removes the 4em gap on the right */
+    margin-right: 0; /* removes the 4em gap on the right */
     padding: 2vh;
     transition: top 0.4s ease-in-out;
-    z-index: -2;              /* sits behind the header background */
+    z-index: -2; /* sits behind the header background */
     max-height: calc(100vh - 60px);
     overflow-y: auto;
   }
@@ -344,7 +387,7 @@ nav ul li .submenu a:hover {
   }
 
   nav ul li .submenu a {
-    color: #fff;              /* was black, unreadable on navy */
+    color: #fff; /* was black, unreadable on navy */
   }
 
   nav ul li .submenu a:hover {
@@ -360,10 +403,10 @@ nav ul li .submenu a:hover {
     font-size: 3em;
   }
   #home {
-  padding: 5em 3em;
-  position: relative;
-  height: 100dvh;
-  overflow: hidden;
-  z-index: 0;   /* keeps the video and overlay inside this section */
-}
+    padding: 5em 3em;
+    position: relative;
+    height: 100dvh;
+    overflow: hidden;
+    z-index: 0; /* keeps the video and overlay inside this section */
+  }
 }
