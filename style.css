@@ -27,12 +27,12 @@ body {
    ========================================================= */
 header {
   width: 100%;
-  height: 60px;
+  height: 80px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   /* background: #003366;  (moved to header::before below) */
-  padding: 1em;
+  padding: 1em 8em;
   /* margin-bottom: 10vh; */
   position: relative; /* needed for z-index to work */
   z-index: 1000;
@@ -330,6 +330,11 @@ nav ul li .submenu a:hover {
    ========================================================= */
 @media screen and (max-width: 695px) {
   /* hamburger */
+  header {
+    padding: 1em;
+    height: 60px;
+    position: sticky;
+  }
   #openbtn {
     display: block;
   }
