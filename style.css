@@ -249,21 +249,25 @@ nav ul li .submenu a:hover {
   flex-direction: column;
   gap: -5px;
 }
-.verse p {
+.hero .verse p {
   font-size: 16px;
+  margin-bottom: 8px;
 }
 .verse p::before {
   content: "";
+  display: inline-block;
+  height: 1.6em;            /* change this to make it taller */
   border-left: 3px solid red;
-  padding-left:7px;
-  height: 1.2em;
+  margin-right: 7px;        /* use this instead of padding-left */
+  vertical-align: middle;
 }
 .verse span {
   font-size: 16px;
   color: #73C3AF;
   font-style: bold;
+  display: block;
+  line-height: 1.2;
 }
-
 
 
 
