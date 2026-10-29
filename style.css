@@ -1,3 +1,6 @@
+/* =========================================================
+   1. RESET
+   ========================================================= */
 * {
   padding: 0;
   margin: 0;
@@ -6,13 +9,46 @@
   text-decoration: none;
 }
 
+/* =========================================================
+   2. PAGE
+   ========================================================= */
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: -8em;
+  /* scroll-padding-top: -8em;  (negative values are invalid) */
+  scroll-padding-top: 0;
 }
 
 body {
   /* padding: 1em; */
+}
+
+/* =========================================================
+   3. HEADER
+   ========================================================= */
+header {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* background: #003366;  (moved to header::before below) */
+  padding: 1em;
+  /* margin-bottom: 10vh; */
+  position: relative;   /* needed for z-index to work */
+  z-index: 1000;
+}
+
+/* header background lives here so the mobile menu can slide out from BEHIND it */
+header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #003366;
+  z-index: -1;
+}
+
+header hr {
+  display: none;
 }
 
 #logo {
@@ -20,46 +56,41 @@ body {
   width: 45px;
 }
 
-header {
-  width: 100%;
-  height: 60px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: #d9d8c2;
-  padding: 1em;
-  /* margin-bottom: 10vh; */
-}
-
+/* =========================================================
+   4. NAVIGATION (base / desktop)
+   ========================================================= */
 nav {
   margin-left: auto;
   z-index: 1000;
 }
 
-nav ul {}
+nav ul {
+  background: #003366;
+  margin-right: 4em;
+}
 
 nav ul li {
   display: inline-block;
   vertical-align: middle;
-  margin-left: 20px;
   cursor: pointer;
   font-size: 18px;
 }
 
 nav ul li a {
-  color: #000;
-  font-size: 1.1em;
+  color: #fff;
+  font-size: 0.9em;
   font-weight: 500;
 }
 
 nav ul li a:hover {}
 
+/* hamburger + close icons (hidden on desktop) */
 #openbtn,
 #closebtn {
   display: none;
-  font-size: 5px;
+  font-size: 7px;
+  fill: #fff;
 }
-
 
 /* remove the blue flash when tapping links and buttons */
 nav,
@@ -69,11 +100,6 @@ nav a,
 nav button {
   -webkit-tap-highlight-color: transparent;
 }
-nav a:focus-visible,
-nav button:focus-visible {
-  outline: 2px solid #000;
-  outline-offset: 2px;
-}
 
 nav a:focus,
 nav a:active {
@@ -81,20 +107,169 @@ nav a:active {
   background: transparent;
 }
 
-@media screen and (max-width: 550px) {
+/* keyboard focus ring (placed AFTER the rule above so it wins) */
+nav a:focus-visible,
+nav button:focus-visible {
+  outline: 2px solid #ffd700;
+  outline-offset: 2px;
+}
+
+/* =========================================================
+   5. DROPDOWN SUB-MENUS
+   ========================================================= */
+nav ul li.has-sub {
+  position: relative;
+  margin: 1em 0;
+}
+
+.nav-row {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin: 0 1em;
+}
+
+/* the little arrow button */
+.arrow {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 1.5em;
+}
+
+.arrow::after {
+  content: "";
+  display: block;
+  width: 7px;
+  height: 7px;
+  border-right: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  transform: translateY(-3px) rotate(45deg);   /* pointing down */
+  transition: transform 0.2s;
+}
+
+li.open > .nav-row .arrow::after {
+  transform: translateY(3px) rotate(-135deg);  /* pointing up */
+}
+
+/* the dropdown: hidden until the li has class "open" */
+.submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: auto;
+  white-space: nowrap;
+  background: #fff;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+  z-index: 100;
+  max-width: fit-content;
+  margin-top: 0.5em;
+  border-radius: 18px;
+  height: auto;
+}
+
+li.open > .submenu {
+  display: block;
+}
+
+nav ul li .submenu a {
+  color: #000;
+  font-size: large;
+  display: block;
+  padding: 10px 14px;
+}
+
+nav ul li .submenu a:hover {
+  background: #c5c4a8;
+}
+
+/* =========================================================
+   6. HERO / BACKGROUND VIDEO
+   ========================================================= */
+#home {
+  padding: 7em;
+  position: relative;
+  height: 100dvh;
+  overflow: hidden;
+  z-index: 0;   /* keeps the video and overlay inside this section */
+}
+
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.hero {
+  /* position: relative; */
+  /* color: #fff; */
+}
+
+.hero h1 {
+  font-size: 5em;
+  /* margin-top: 10vh; */
+  color: #ffffff;
+}
+
+.hero p {
+  font-size: 20px;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+.hero button {
+  outline: none;
+  border: none;
+  font-size: 18px;
+  padding: 5px 10px;
+  border-radius: 10px;
+  background: #c5c4a8;
+}
+
+/* colour layer on top of the video */
+.hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  /* background: rgba(30, 64, 175, 0.5); */
+  /* background: rgba(65, 105, 225, 0.9); */
+  background: rgba(18, 71, 124, 0.6);
+  z-index: -1;
+}
+
+/* =========================================================
+   7. MOBILE (695px and below), kept at the end so it wins
+   ========================================================= */
+@media screen and (max-width: 695px) {
+
+  /* hamburger */
   #openbtn {
     display: block;
   }
 
+  /* sliding menu (slides out from behind the header) */
   nav ul {
-    background: #d9d8c2;
+    /* background: #d9d8c2; */
+    background: #003366;
     position: fixed;
     top: -100%;
     right: 0;
     width: 100%;
+    margin-right: 0;          /* removes the 4em gap on the right */
     padding: 2vh;
     transition: top 0.4s ease-in-out;
-    /* z-index: -1; */
+    z-index: -2;              /* sits behind the header background */
+    max-height: calc(100vh - 60px);
+    overflow-y: auto;
   }
 
   nav ul li {
@@ -114,80 +289,13 @@ nav a:active {
   header.menu-open #closebtn {
     display: block;
   }
-}
-header {
-    z-index: 1000;
-}
-/* nav #navlist {
-  z-index: 1000;
-} */
-/* ===== Dropdown sub-menus ===== */
-nav ul li.has-sub {
-  position: relative;
-}
 
-.nav-row {
-  display: flex;
-  align-items: center;
-  gap: 4px;
-}
-
-/* the little arrow button */
-.arrow {
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 0 6px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 1.5em;
-}
-.arrow::after {
-  content: "";
-  display: block;
-  width: 7px;
-  height: 7px;
-  border-right: 2px solid #000;
-  border-bottom: 2px solid #000;
-  transform: translateY(-3px) rotate(45deg);   /* pointing down */
-  transition: transform 0.2s;
-}
-li.open > .nav-row .arrow::after {
-  transform: translateY(3px) rotate(-135deg);  /* pointing up */
-}
-
-/* the dropdown: hidden until the li has class "open" */
-.submenu {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  min-width: 240px;
-  white-space: nowrap;
-  background: #d9d8c2;
-  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
-  z-index: 100;
-}
-li.open > .submenu {
-  display: block;
-}
-
-nav ul li .submenu a {
-  display: block;
-  padding: 10px 14px;
-}
-nav ul li .submenu a:hover {
-  background: #c5c4a8;
-}
-
-/* mobile: stacked inside the sliding menu */
-@media screen and (max-width: 550px) {
-  nav ul {
-    max-height: calc(100vh - 60px);
-    overflow-y: auto;
+  header hr {
+    display: block;
+    margin: 1em 0;
   }
 
+  /* dropdowns stacked inside the menu */
   .nav-row {
     justify-content: space-between;
   }
@@ -200,39 +308,21 @@ nav ul li .submenu a:hover {
     background: transparent;
     padding-left: 12px;
   }
+
+  nav ul li .submenu a {
+    color: #fff;              /* was black, unreadable on navy */
+  }
+
+  nav ul li .submenu a:hover {
+    background: rgba(255, 255, 255, 0.12);
+  }
+
+  /* hero fits small screens */
+  #home {
+    padding: 3em 1.5em;
+  }
+
+  .hero h1 {
+    font-size: 3em;
+  }
 }
-#home {
-  padding: 1em;
-  position: relative;
-  height: 100dvh;
-  overflow: hidden;
-}
-.bg-video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: -1;
-}
-.hero {
-  /* position: relative; */
-  color: #fff;
-}
-.hero h1 {
-  font-size: 50px;
-  margin-bottom: 10px;
-}
-.hero p {
-  font-size: 20px;
-  margin-bottom: 20px;
-}
-.hero button {
-  outline: none;
-  border: none;
-  font-size: 18px;
-  padding: 5px 10px;
-  border-radius: 10px;
-  background: #c5c4a8;
-} 

@@ -6,99 +6,116 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <script src="/script.js" defer></script>
-    <title>Document</title>
+    <script src="script.js" defer></script>
+    <title>Redeemed Vanguard</title>
 </head>
 
 <body>
+
+    <!-- ===== HEADER ===== -->
+    <header>
+        <div class="logo">
+            <img src="./Images/logo.png" alt="Redeemed vangaurd logo" id="logo" />
+        </div>
+
+        <nav>
+            <ul class="header-link" id="navlist">
+
+                <li class="has-sub">
+                    <div class="nav-row">
+                        <a href="#home">Home</a>
+                        <!-- <button class="arrow" aria-label="Open Home menu" aria-expanded="false"></button> -->
+                    </div>
+                    <!--
+                    <div class="submenu">
+                        <a href="#who-we-are">Who We Are</a>
+                        <a href="#what-we-do">What We Do</a>
+                        <a href="#become-member">How To Become A Member</a>
+                    </div>
+                    -->
+                    <hr>
+                </li>
+
+                <li class="has-sub">
+                    <div class="nav-row">
+                        <a href="#our-history">Our History</a>
+                        <button class="arrow" aria-label="Open Our History menu" aria-expanded="false"></button>
+                    </div>
+                    <div class="submenu">
+                        <a href="#who-we-are">Who We Are</a>
+                        <a href="#what-we-do">What We Do</a>
+                        <a href="#become-member">How To Become A Member</a>
+                        <a href="#hierarchy">Hierarchy (Our Structure)</a>
+                        <a href="#officers">Regional Officers / Provincial Heads</a>
+                        <a href="#locations">Location Of Each Province</a>
+                    </div>
+                    <hr>
+                </li>
+
+                <li class="has-sub">
+                    <div class="nav-row">
+                        <a href="#place-order">Place Order</a>
+                        <button class="arrow" aria-label="Open Place Order menu" aria-expanded="false"></button>
+                    </div>
+                    <div class="submenu">
+                        <a href="#uniform">Uniform</a>
+                        <a href="#gadgets">Gadgets</a>
+                    </div>
+                    <hr>
+                </li>
+
+                <li class="has-sub">
+                    <div class="nav-row">
+                        <a href="#register">Register</a>
+                        <button class="arrow" aria-label="Open Register menu" aria-expanded="false"></button>
+                    </div>
+                    <div class="submenu">
+                        <a href="#service-number">Service Number</a>
+                        <a href="#id-card">ID Card</a>
+                    </div>
+                </li>
+
+            </ul>
+        </nav>
+
+        <div class="nav-menu">
+            <svg id="openbtn" height="22px" width="22px">
+                <use href="#menu" />
+            </svg>
+            <svg id="closebtn" height="22px" width="22px">
+                <use href="#close-menu" />
+            </svg>
+        </div>
+    </header>
+
+    <!-- ===== MAIN CONTENT ===== -->
     <main class="container">
-            <header>
-                <div class="logo">
-                    <img src="./Images/logo.png" alt="Redeemed vangaurd logo" id="logo" />
-                </div>
-                <nav>
-    <ul class="header-link" id="navlist">
-
-        <li class="has-sub">
-            <div class="nav-row">
-                <a href="#Home">Home</a>
-                <button class="arrow" aria-label="Open Home menu" aria-expanded="false"></button>
-            </div>
-            <div class="submenu">
-                <a href="#who-we-are">Who We Are</a>
-                <a href="#what-we-do">What We Do</a>
-                <a href="#become-member">How To Become A Member</a>
-            </div>
-        </li>
-
-        <li class="has-sub">
-            <div class="nav-row">
-                <a href="#our-history">Our History</a>
-                <button class="arrow" aria-label="Open Our History menu" aria-expanded="false"></button>
-            </div>
-            <div class="submenu">
-                <a href="#hierarchy">Hierarchy (Our Structure)</a>
-                <a href="#officers">Regional Officers / Provincial Heads</a>
-                <a href="#locations">Location Of Each Province</a>
-            </div>
-        </li>
-
-        <li class="has-sub">
-            <div class="nav-row">
-                <a href="#place-order">Place Order</a>
-                <button class="arrow" aria-label="Open Place Order menu" aria-expanded="false"></button>
-            </div>
-            <div class="submenu">
-                <a href="#uniform">Uniform</a>
-                <a href="#gadgets">Gadgets</a>
-            </div>
-        </li>
-
-        <li class="has-sub">
-            <div class="nav-row">
-                <a href="#register">Register</a>
-                <button class="arrow" aria-label="Open Register menu" aria-expanded="false"></button>
-            </div>
-            <div class="submenu">
-                <a href="#service-number">Service Number</a>
-                <a href="#id-card">ID Card</a>
-            </div>
-        </li>
-
-    </ul>
-</nav>
-                <div class="nav-menu">
-                    <svg id="openbtn" height="22px" width="22px">
-                        <use href="#menu" />
-                    </svg>
-                    <svg id="closebtn" height="22px" width="22px">
-                        <use href="#close-menu" />
-                    </svg>
-                </div>
-            </header>
-        
-
         <section id="home">
             <div class="hero">
-            <video class="bg-video" autoplay muted loop playsinline >
-                <source src="Images/backgroundvid.mp4" type="video/mp4"/>
-            </video>
-                <h1>Redeemed Vanguard</h1>
+                <video class="bg-video" autoplay muted loop playsinline>
+                    <source src="Images/bg.mp4" type="video/mp4" />
+                </video>
+
+                <h1>Redeemed <br> Vanguard</h1>
                 <p>Region 67 Battalion</p>
                 <button>Become a Member</button>
             </div>
         </section>
     </main>
+
+    <!-- ===== SVG ICONS ===== -->
+    <svg style="display: none">
+        <symbol id="menu" viewBox="0 0 24 24">
+            <!-- <path d="M24 18v1h-24v-1h24zm0-6v1h-24v-1h24zm0-6v1h-24v-1h24z" fill="#1040e2" /> -->
+            <path d="M24 18v1h-24v-1h24zm0-6v1h-24v-1h24zm0-6v1h-24v-1h24z" />
+            <path d="M24 19h-24v-1h24v1zm0-6h-24v-1h24v1zm0-6h-24v-1h24v1z" />
+        </symbol>
+        <symbol id="close-menu" viewBox="0 0 24 24">
+            <path
+                d="m12 10.93 5.719-5.72c.146-.146.339-.219.531-.219.404 0 .75.324.75.749 0 .193-.073.385-.219.532l-5.72 5.719 5.719 5.719c.147.147.22.339.22.531 0 .427-.349.75-.75.75-.192 0-.385-.073-.531-.219l-5.719-5.719-5.719 5.719c-.146.146-.339.219-.531.219-.401 0-.75-.323-.75-.75 0-.192.073-.384.22-.531l5.719-5.719-5.72-5.719c-.146-.147-.219-.339-.219-.532 0-.425.346-.749.75-.749.192 0 .385.073.531.219z" />
+        </symbol>
+    </svg>
+
 </body>
-<svg style="display: none">
-    <symbol id="menu" viewBox="0 0 24 24">
-        <path d="M24 18v1h-24v-1h24zm0-6v1h-24v-1h24zm0-6v1h-24v-1h24z" fill="#1040e2" />
-        <path d="M24 19h-24v-1h24v1zm0-6h-24v-1h24v1zm0-6h-24v-1h24v1z" />
-    </symbol>
-    <symbol id="close-menu" viewBox="0 0 24 24">
-        <path
-            d="m12 10.93 5.719-5.72c.146-.146.339-.219.531-.219.404 0 .75.324.75.749 0 .193-.073.385-.219.532l-5.72 5.719 5.719 5.719c.147.147.22.339.22.531 0 .427-.349.75-.75.75-.192 0-.385-.073-.531-.219l-5.719-5.719-5.719 5.719c-.146.146-.339.219-.531.219-.401 0-.75-.323-.75-.75 0-.192.073-.384.22-.531l5.719-5.719-5.72-5.719c-.146-.147-.219-.339-.219-.532 0-.425.346-.749.75-.749.192 0 .385.073.531.219z" />
-    </symbol>
-</svg>
 
 </html>
