@@ -242,7 +242,7 @@ nav ul li .submenu a:hover {
   inset: 0;
   /* background: rgba(30, 64, 175, 0.5); */
   /* background: rgba(65, 105, 225, 0.9); */
-  background: rgba(18, 71, 124, 0.6);
+  background: rgba(18, 71, 124, 0.9);
   z-index: -1;
 }
 
