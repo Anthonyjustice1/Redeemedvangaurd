@@ -244,6 +244,33 @@ nav ul li .submenu a:hover {
   background: rgba(18, 71, 124, 0.9);
   z-index: -1;
 }
+.verse {
+  display: flex;
+  flex-direction: column;
+  gap: -5px;
+}
+.verse p {
+  font-size: 16px;
+}
+.verse p::before {
+  content: "";
+  border-left: 3px solid red;
+  padding-left:7px;
+  height: 1.2em;
+}
+.verse span {
+  font-size: 16px;
+  color: #73C3AF;
+  font-style: bold;
+}
+
+
+
+
+
+
+
+
 
 /* =========================================================
    7. MOBILE (695px and below), kept at the end so it wins
