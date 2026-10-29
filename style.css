@@ -191,7 +191,7 @@ nav ul li .submenu a:hover {
    6. HERO / BACKGROUND VIDEO
    ========================================================= */
 #home {
-  padding: 7em;
+  padding: 8em;
   position: relative;
   height: 100dvh;
   overflow: hidden;
@@ -215,23 +215,28 @@ nav ul li .submenu a:hover {
 
 .hero h1 {
   font-size: 5em;
-  /* margin-top: 10vh; */
+  margin-bottom: 15px;
   color: #ffffff;
+  line-height: 1;
 }
 
 .hero p {
-  font-size: 20px;
+  font-size: 2em;
   margin-bottom: 20px;
   color: #ffffff;
+  font-weight: 500;
 }
 
 .hero button {
   outline: none;
   border: none;
   font-size: 18px;
-  padding: 5px 10px;
-  border-radius: 10px;
-  background: #c5c4a8;
+  padding: 10px 20px;
+  border-radius: 15px;
+  background: red;
+  color: #fff;
+  cursor: pointer;
+  font-weight: 500;
 }
 
 /* colour layer on top of the video */
@@ -239,8 +244,6 @@ nav ul li .submenu a:hover {
   content: '';
   position: absolute;
   inset: 0;
-  /* background: rgba(30, 64, 175, 0.5); */
-  /* background: rgba(65, 105, 225, 0.9); */
   background: rgba(18, 71, 124, 0.9);
   z-index: -1;
 }
@@ -264,9 +267,10 @@ nav ul li .submenu a:hover {
 .verse span {
   font-size: 16px;
   color: #73C3AF;
-  font-style: bold;
+  font-weight: bold;
   display: block;
   line-height: 1.2;
+  margin-bottom: 15px;
 }
 
 
@@ -355,4 +359,11 @@ nav ul li .submenu a:hover {
   .hero h1 {
     font-size: 3em;
   }
+  #home {
+  padding: 5em 3em;
+  position: relative;
+  height: 100dvh;
+  overflow: hidden;
+  z-index: 0;   /* keeps the video and overlay inside this section */
+}
 }
