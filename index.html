@@ -1,127 +1,154 @@
 <!doctype html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
     <title>Redeemed Vanguard</title>
-</head>
+  </head>
 
-<body>
-
+  <body>
     <!-- ===== HEADER ===== -->
     <header>
-        <div class="logo">
-            <img src="./Images/logo.png" alt="Redeemed vangaurd logo" id="logo" />
-        </div>
+      <div class="logo">
+        <img src="./Images/logo.png" alt="Redeemed vangaurd logo" id="logo" />
+      </div>
 
-        <nav>
-            <ul class="header-link" id="navlist">
+      <nav>
+        <ul class="header-link" id="navlist">
+          <li class="has-sub">
+            <div class="nav-row">
+              <a href="#home">Home</a>
+            </div>
 
-                <li class="has-sub">
-                    <div class="nav-row">
-                        <a href="#home">Home</a>
-                    </div>
-                
-                    <hr>
-                </li>
+            <hr />
+          </li>
 
-                <li class="has-sub">
-                    <div class="nav-row">
-                        <a href="#our-history">Our History</a>
-                        <button class="arrow" aria-label="Open Our History menu" aria-expanded="false"></button>
-                    </div>
-                    <div class="submenu">
-                        <a href="#who-we-are">Who We Are</a>
-                        <a href="#what-we-do">What We Do</a>
-                        <a href="#become-member">How To Become A Member</a>
-                        <a href="#hierarchy">Hierarchy (Our Structure)</a>
-                        <a href="#officers">Regional Officers / Provincial Heads</a>
-                        <a href="#locations">Location Of Each Province</a>
-                    </div>
-                    <hr>
-                </li>
+          <li class="has-sub">
+            <div class="nav-row">
+              <a href="#our-history">Our History</a>
+              <button
+                class="arrow"
+                aria-label="Open Our History menu"
+                aria-expanded="false"
+              ></button>
+            </div>
+            <div class="submenu">
+              <a href="#who-we-are">Who We Are</a>
+              <a href="#what-we-do">What We Do</a>
+              <a href="#become-member">How To Become A Member</a>
+              <a href="#hierarchy">Hierarchy (Our Structure)</a>
+              <a href="#officers">Regional Officers / Provincial Heads</a>
+              <a href="#locations">Location Of Each Province</a>
+            </div>
+            <hr />
+          </li>
 
-                <li class="has-sub">
-                    <div class="nav-row">
-                        <a href="#place-order">Place Order</a>
-                        <button class="arrow" aria-label="Open Place Order menu" aria-expanded="false"></button>
-                    </div>
-                    <div class="submenu">
-                        <a href="#uniform">Uniform</a>
-                        <a href="#gadgets">Gadgets</a>
-                    </div>
-                    <hr>
-                </li>
+          <li class="has-sub">
+            <div class="nav-row">
+              <a href="#place-order">Place Order</a>
+              <button
+                class="arrow"
+                aria-label="Open Place Order menu"
+                aria-expanded="false"
+              ></button>
+            </div>
+            <div class="submenu">
+              <a href="#uniform">Uniform</a>
+              <a href="#gadgets">Gadgets</a>
+            </div>
+            <hr />
+          </li>
 
-                <li class="has-sub">
-                    <div class="nav-row">
-                        <a href="#register">Register</a>
-                        <button class="arrow" aria-label="Open Register menu" aria-expanded="false"></button>
-                    </div>
-                    <div class="submenu">
-                        <a href="#service-number">Service Number</a>
-                        <a href="#id-card">ID Card</a>
-                    </div>
-                </li>
+          <li class="has-sub">
+            <div class="nav-row">
+              <a href="#register">Register</a>
+              <button
+                class="arrow"
+                aria-label="Open Register menu"
+                aria-expanded="false"
+              ></button>
+            </div>
+            <div class="submenu">
+              <a href="#service-number">Service Number</a>
+              <a href="#id-card">ID Card</a>
+            </div>
+          </li>
+        </ul>
+      </nav>
 
-            </ul>
-        </nav>
-
-        <div class="nav-menu">
-            <svg id="openbtn" height="25px" width="25px">
-                <use href="#menu" />
-            </svg>
-            <svg id="closebtn" height="25px" width="25px">
-                <use href="#close-menu" />
-            </svg>
-        </div>
+      <div class="nav-menu">
+        <svg id="openbtn" height="25px" width="25px">
+          <use href="#menu" />
+        </svg>
+        <svg id="closebtn" height="25px" width="25px">
+          <use href="#close-menu" />
+        </svg>
+      </div>
     </header>
 
     <!-- ===== MAIN CONTENT ===== -->
     <main class="container">
-        <section id="home">
-            <div class="hero">
-                <video class="bg-video" autoplay muted loop playsinline>
-                    <source src="Images/bg.mp4" type="video/mp4" />
-                </video>
+      <section id="home">
+        <div class="hero">
+          <video class="bg-video" autoplay muted loop playsinline>
+            <source src="Images/bg.mp4" type="video/mp4" />
+          </video>
 
-                <h1>Redeemed <br> Vanguard</h1>
-                <p class="region">Region 67 Battalion</p>
-                <div class="verse">
-                    <p>And the violent take it by force</p>
-                    <span>Matthew 11:12b</span>
-                </div>
-                <a href="#register" class="join">
-                    <p>Become a Member</p>
-                     <svg id="joinarrow" height="20px" width="20px" fill="#fff">
-                <use href="#join-arrow" />
+          <h1>
+            Redeemed <br />
+            Vanguard
+          </h1>
+          <p class="region">Region 67 Battalion</p>
+          <div class="verse">
+            <p>And the violent take it by force</p>
+            <span>Matthew 11:12b</span>
+          </div>
+          <a href="#register" class="join">
+            <p>Become a Member</p>
+            <svg id="joinarrow" height="20px" width="20px" fill="#fff">
+              <use href="#join-arrow" />
             </svg>
-                </a>
-                
-            </div>
-        </section>
+          </a>
+        </div>
+      </section>
+
+    
+      <section id="who">
+        <div>
+          <h3>Who we are</h3>
+          <p> <span>The Redeemed Vanguard (RV)</span> is one of the departments of RCCG and is the security arm of the church (RCCG) and it works in synergy with other departments of the church to archive a common goal</p>
+        </div>
+      </section>
+      <!-- <section class="history">
+        <div id="history">
+          <h1>Our History</h1>
+          <p>
+           ORIGIN OF RV (REDEEMED VANGUARD) The origin of the Redeemed Vanguard will be looked into briefly though there have been some changes in offices since then due to the mission growth and expansion Preamble: The department is the security arm of the church RCCG; it has metamorphosed through the years. It was first known as Holy Police, Redeemed Army, Redeemed Volunteer and then Redeemed Vanguard. As Holy Police, the members were reflective jackets with the inscription 'Holy Police'. The Redeemed Army (RA) was a product of RCCG north 5 now Region 10 Abuja. The name Redeemed Army was hatched under the leadership of the then Provincial Pastor, Pastor Peter Amenkhiemen (now Assistant General Overseer on Youth Affairs). It was meant to be a quick intervention force (QIF) which train under the supervision of Pastor Dele Taiwo aka Alpha Charlie (current Assistant National Coordinator) in charge of Operations. The first test was during the RCCG Annual Convention of 2004 at the Redemption Camp. The unit kitted in combat khaki with a jungle boot. However, after the Special Holy Service in March 2005 the RCCG leadership dissolves nationwide all forms/names of Volunteer Security in the mission and replaced it with Redeemed Army (RA) due to her efficiency. However the Redeemed Army was renamed Redeemed Volunteer (RV) subsequently by the mission due to the security situation in the nation for non-members not to feel RCCG is raising her own military force and in the year 2024 the name was later changed to Redeemed Vanguard following a series of restructuring in its leadership and functionality. The current leaders of the department are: Pastor (CP rtd) Abiodun Ige (National Coordinator), Pastor Bamidele Taiwo (Alpha Charlie) (Assistant National Coordinator), Pastor Favour Umukoro (National Admin Officer)
+          </p>
+        </div>
+      </section> -->
     </main>
 
     <!-- ===== SVG ICONS ===== -->
     <svg style="display: none">
-        <symbol id="menu" viewBox="0 0 24 24">
-            <!-- <path d="M24 18v1h-24v-1h24zm0-6v1h-24v-1h24zm0-6v1h-24v-1h24z" fill="#1040e2" /> -->
-            <path d="M24 18v1h-24v-1h24zm0-6v1h-24v-1h24zm0-6v1h-24v-1h24z" />
-            <path d="M24 19h-24v-1h24v1zm0-6h-24v-1h24v1zm0-6h-24v-1h24v1z" />
-        </symbol>
-        <symbol id="close-menu" viewBox="0 0 24 24">
-            <path
-                d="m12 10.93 5.719-5.72c.146-.146.339-.219.531-.219.404 0 .75.324.75.749 0 .193-.073.385-.219.532l-5.72 5.719 5.719 5.719c.147.147.22.339.22.531 0 .427-.349.75-.75.75-.192 0-.385-.073-.531-.219l-5.719-5.719-5.719 5.719c-.146.146-.339.219-.531.219-.401 0-.75-.323-.75-.75 0-.192.073-.384.22-.531l5.719-5.719-5.72-5.719c-.146-.147-.219-.339-.219-.532 0-.425.346-.749.75-.749.192 0 .385.073.531.219z" />
-        </symbol>
-        <symbol id="join-arrow" viewBox="0 0 24 24">
-           <path d="m14.523 18.787s4.501-4.505 6.255-6.26c.146-.146.219-.338.219-.53s-.073-.383-.219-.53c-1.753-1.754-6.255-6.258-6.255-6.258-.144-.145-.334-.217-.524-.217-.193 0-.385.074-.532.221-.293.292-.295.766-.004 1.056l4.978 4.978h-14.692c-.414 0-.75.336-.75.75s.336.75.75.75h14.692l-4.979 4.979c-.289.289-.286.762.006 1.054.148.148.341.222.533.222.19 0 .378-.072.522-.215z" />
-        </symbol>
+      <symbol id="menu" viewBox="0 0 24 24">
+        <!-- <path d="M24 18v1h-24v-1h24zm0-6v1h-24v-1h24zm0-6v1h-24v-1h24z" fill="#1040e2" /> -->
+        <path d="M24 18v1h-24v-1h24zm0-6v1h-24v-1h24zm0-6v1h-24v-1h24z" />
+        <path d="M24 19h-24v-1h24v1zm0-6h-24v-1h24v1zm0-6h-24v-1h24v1z" />
+      </symbol>
+      <symbol id="close-menu" viewBox="0 0 24 24">
+        <path
+          d="m12 10.93 5.719-5.72c.146-.146.339-.219.531-.219.404 0 .75.324.75.749 0 .193-.073.385-.219.532l-5.72 5.719 5.719 5.719c.147.147.22.339.22.531 0 .427-.349.75-.75.75-.192 0-.385-.073-.531-.219l-5.719-5.719-5.719 5.719c-.146.146-.339.219-.531.219-.401 0-.75-.323-.75-.75 0-.192.073-.384.22-.531l5.719-5.719-5.72-5.719c-.146-.147-.219-.339-.219-.532 0-.425.346-.749.75-.749.192 0 .385.073.531.219z"
+        />
+      </symbol>
+      <symbol id="join-arrow" viewBox="0 0 24 24">
+        <path
+          d="m14.523 18.787s4.501-4.505 6.255-6.26c.146-.146.219-.338.219-.53s-.073-.383-.219-.53c-1.753-1.754-6.255-6.258-6.255-6.258-.144-.145-.334-.217-.524-.217-.193 0-.385.074-.532.221-.293.292-.295.766-.004 1.056l4.978 4.978h-14.692c-.414 0-.75.336-.75.75s.336.75.75.75h14.692l-4.979 4.979c-.289.289-.286.762.006 1.054.148.148.341.222.533.222.19 0 .378-.072.522-.215z"
+        />
+      </symbol>
     </svg>
-
-</body>
-
+  </body>
 </html>

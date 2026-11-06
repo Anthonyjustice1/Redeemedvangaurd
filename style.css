@@ -205,7 +205,7 @@ nav ul li .submenu a:hover {
 #home {
   padding: 8em;
   position: relative;
-  height: 100dvh;
+  height: 70dvh;
   overflow: hidden;
   z-index: 0; /* keeps the video and overlay inside this section */
 }
@@ -326,6 +326,33 @@ nav ul li .submenu a:hover {
   color: #7fd3b9;
 }
 
+
+#who {
+  padding: 4em 8em;
+}
+#who h3 {
+  font-family: Figtree, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+font-size: 40px;
+font-weight: 700;
+/* line-height: 21px; */
+letter-spacing: 1.82px;
+color: #003366;
+}
+#who p {
+  /* padding: 1em; */
+}
+#who p span {
+  font-family: "Bricolage Grotesque", "Arial Narrow", "Helvetica Neue", Arial, sans-serif;
+font-size: 25px;
+font-weight: 700;
+/* line-height: 60px; */
+letter-spacing: -1.12px;
+color: #036;
+}
+
+
+
+
 /* =========================================================
    7. MOBILE (695px and below), kept at the end so it wins
    ========================================================= */
@@ -417,7 +444,7 @@ letter-spacing: -2.34px;
 color: #fff;
   }
   #home {
-    padding: 5em 3em;
+    padding: 3em 3em;
     position: relative;
     height: 100dvh;
     overflow: hidden;
@@ -452,5 +479,17 @@ font-size: 15px;
 font-weight: 600;
 line-height: 15px;
 color: #dce7f2;
+  }
+  #who {
+    padding: 1em 3em;
+  }
+  #who h3 {
+    font-size: 30px;
+  }
+  #who p {
+    font-size: 16px;
+  }
+  #who p span {
+    font-size: 20px;
   }
 }
