@@ -346,7 +346,6 @@ text-align: center;
   font-family: Figtree, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
 font-size: 40px;
 font-weight: 700;
-/* line-height: 21px; */
 letter-spacing: 1.82px;
 color: #003366;
 }
@@ -460,7 +459,7 @@ color: #fff;
     height: 100vh;          
     overflow: hidden;
     z-index: 0; 
-  }
+    margin-bottom: 8vh; }
   .hero .region {
     font-family: "Bricolage Grotesque", "Arial Narrow", "Helvetica Neue", Arial, sans-serif;
 font-size: 52px;
@@ -497,26 +496,8 @@ color: #dce7f2;
   .hero .join {
     margin-top: 2vh;
   }
-  /* #who {
-    padding: 1em 3em;
-    text-align: left;
-  }
-  #who h3 {
-   font-family: Figtree, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
-font-size: 13px;
-font-weight: 700;
-line-height: 21px;
-letter-spacing: 1.82px;
-color: #007a5e;
-  }
-  #who p {
-    font-size: 16px;
-  }
-  #who p span {
-    font-size: 20px;
-  } */
    #who {
-    padding: 1em; 
+    padding: 2em; 
   }
   #who h3 {
     font-size: 1.4em;
