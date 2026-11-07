@@ -446,7 +446,9 @@ color: #fff;
   #home {
     padding: 3em 3em;
     position: relative;
-    height: 100dvh;
+  min-height: calc(100dvh - 60px);
+  display: flex;
+  align-items: center;               /* centres the content up and down */
     overflow: hidden;
     z-index: 0; /* keeps the video and overlay inside this section */
   }
@@ -459,7 +461,7 @@ letter-spacing: -2.34px;
 color: #c9d8e8;
   }
   .hero .verse {
-    margin-top: 6vh;
+    margin-top: 2vh;
   }
   .hero .verse p {
     font-family: Figtree, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
@@ -484,7 +486,7 @@ line-height: 15px;
 color: #dce7f2;
   }
   .hero .join {
-    margin-top: 6vh;
+    margin-top: 2vh;
   }
   #who {
     padding: 1em 3em;
