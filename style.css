@@ -329,6 +329,18 @@ nav ul li .submenu a:hover {
 
 #who {
   padding: 4em 8em;
+  display: flex;
+  justify-content: center;
+  min-height: 30vh;
+  width: 100%;
+}
+.who {
+  /* padding: 1em; */
+box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+border-radius: 20px;
+width: 70%;
+min-height: 30vh;
+text-align: center;
 }
 #who h3 {
   font-family: Figtree, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
@@ -485,7 +497,7 @@ color: #dce7f2;
   .hero .join {
     margin-top: 2vh;
   }
-  #who {
+  /* #who {
     padding: 1em 3em;
     text-align: left;
   }
@@ -502,5 +514,29 @@ color: #007a5e;
   }
   #who p span {
     font-size: 20px;
+  } */
+   #who {
+    padding: 1em; 
+  }
+  #who h3 {
+    font-size: 1.4em;
+  }
+     .who {
+    width: 100%;           /* use the full width on phones */
+    height: auto;          /* grow with the text instead of 30vh */
+    padding: 1.5em 1.2em;
+    margin: 0 auto;
+    border-radius: 16px;
+  }
+
+  .who h3 {
+    font-size: 1.4em;
+    margin-bottom: 10px;
+  }
+
+  .who p {
+    font-size: 1em;
+    line-height: 1.6;
+    text-align: left;      /* centred paragraphs are hard to read on phones */
   }
 }
