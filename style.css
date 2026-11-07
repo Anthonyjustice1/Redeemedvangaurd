@@ -444,13 +444,10 @@ letter-spacing: -2.34px;
 color: #fff;
   }
   #home {
-    padding: 3em 3em;
-    position: relative;
-  min-height: calc(100dvh - 60px);
-  display: flex;
-  align-items: center;               /* centres the content up and down */
+  padding: 3em 3em;
+    height: 100vh;          
     overflow: hidden;
-    z-index: 0; /* keeps the video and overlay inside this section */
+    z-index: 0; 
   }
   .hero .region {
     font-family: "Bricolage Grotesque", "Arial Narrow", "Helvetica Neue", Arial, sans-serif;
