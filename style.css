@@ -360,7 +360,7 @@ color: #036;
   /* hamburger */
   header {
     padding: 1em;
-    height: 60px;
+    height: 80px;
     position: sticky;
   }
   #openbtn {
@@ -379,7 +379,7 @@ color: #036;
     padding: 2vh;
     transition: top 0.4s ease-in-out;
     z-index: -2; /* sits behind the header background */
-    max-height: calc(100vh - 60px);
+    max-height: calc(100vh - 20px);
     overflow-y: auto;
   }
 
@@ -390,7 +390,7 @@ color: #036;
 
   /* open state */
   header.menu-open nav ul {
-    top: 60px;
+    top: 80px;
   }
 
   header.menu-open #openbtn {
@@ -446,7 +446,7 @@ color: #fff;
   #home {
     padding: 3em 3em;
     position: relative;
-    height: 78dvh;
+    height: 100dvh;
     overflow: hidden;
     z-index: 0; /* keeps the video and overlay inside this section */
   }
@@ -457,6 +457,9 @@ font-weight: 500;
 line-height: 49px;
 letter-spacing: -2.34px;
 color: #c9d8e8;
+  }
+  .hero .verse {
+    margin-top: 6vh;
   }
   .hero .verse p {
     font-family: Figtree, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
@@ -480,12 +483,20 @@ font-weight: 600;
 line-height: 15px;
 color: #dce7f2;
   }
+  .hero .join {
+    margin-top: 6vh;
+  }
   #who {
     padding: 1em 3em;
     text-align: left;
   }
   #who h3 {
-    font-size: 30px;
+   font-family: Figtree, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+font-size: 13px;
+font-weight: 700;
+line-height: 21px;
+letter-spacing: 1.82px;
+color: #007a5e;
   }
   #who p {
     font-size: 16px;
